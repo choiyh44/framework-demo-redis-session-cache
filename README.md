@@ -82,7 +82,5 @@ public class SessionConfig {
 - http://localhost:8080/sample/session 접속하면
 - 세션이 생성되고, 세션에 name: testname 항목이 추가된다.
 
-## redis2를 stomp pub/sub에 사용
-
-## TODO redis2를 ehcache에 사용
+## [TODO] redis2를 cache에 사용
 
