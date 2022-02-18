@@ -1,0 +1,29 @@
+app:
+  name: test 0
+
+redis-list:
+  redis1:
+    host: 127.0.0.1
+    port: 6379
+    lettuce:
+      pool:
+        min-idle: 1
+        max-idle: 3
+        max-active: 8
+        max-wait: 1ms
+      shutdown-timeout: 100ms
+  redis2:
+    host: 127.0.0.1
+    port: 6380
+    lettuce:
+      pool:
+        min-idle: 1
+        max-idle: 3
+        max-active: 8
+        max-wait: 1ms
+      shutdown-timeout: 100ms
+
+spring:
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
