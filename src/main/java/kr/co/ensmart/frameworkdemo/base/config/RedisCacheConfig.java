@@ -27,6 +27,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @since 2022. 2. 18.
  *
  */
+//@Profile("!local")
 @Configuration
 @EnableCaching 
 public class RedisCacheConfig {
@@ -54,8 +55,9 @@ public class RedisCacheConfig {
         return RedisCacheManager.RedisCacheManagerBuilder.fromConnectionFactory(redisConnectionFactory).cacheDefaults(redisCacheConfiguration).build();
     }
 
-    /*
+    /**
      * ehcache 설정
+     * @deprecated net.sf.ehcache로 구성된 예제임. 구식 라이브러이임. 신식 라이브러리인 org.echache로 구성해야함. 
      */
     @Bean
     public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {

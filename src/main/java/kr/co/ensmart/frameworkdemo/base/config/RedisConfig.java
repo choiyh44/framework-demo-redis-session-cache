@@ -54,7 +54,7 @@ public class RedisConfig {
 
     @Bean(name = "redis1LettuceConnectionFactory")
     @Primary
-    public LettuceConnectionFactory Redis1LettuceConnectionFactory(ClientResources clientResources) {
+    public LettuceConnectionFactory redis1LettuceConnectionFactory(ClientResources clientResources) {
         RedisStandaloneConfiguration redis1StandaloneConfiguration = getStandaloneConfig(redis1);
         LettuceClientConfiguration clientConfig = getLettuceClientConfiguration(clientResources, redis1);
         return new LettuceConnectionFactory(redis1StandaloneConfiguration, clientConfig);
@@ -69,7 +69,7 @@ public class RedisConfig {
     }
 
     @Bean(name = "redis2LettuceConnectionFactory")
-    public LettuceConnectionFactory Redis2LettuceConnectionFactory(ClientResources clientResources) {
+    public LettuceConnectionFactory redis2LettuceConnectionFactory(ClientResources clientResources) {
         RedisStandaloneConfiguration redis1StandaloneConfiguration = getStandaloneConfig(redis2);
         LettuceClientConfiguration clientConfig = getLettuceClientConfiguration(clientResources, redis2);
         return new LettuceConnectionFactory(redis1StandaloneConfiguration, clientConfig);
@@ -149,5 +149,5 @@ public class RedisConfig {
         }
         return config;
     }
-    
+
 }
