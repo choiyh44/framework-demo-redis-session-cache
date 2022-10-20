@@ -17,7 +17,7 @@ redis-list:
         min-idle: 1
         max-idle: 3
         max-active: 8
-        max-wait: 1ms
+        max-wait: 300ms
       shutdown-timeout: 100ms
   redis2:
     host: 127.0.0.1
@@ -27,5 +27,5 @@ redis-list:
         min-idle: 1
         max-idle: 3
         max-active: 8
-        max-wait: 1ms
+        max-wait: 300ms
       shutdown-timeout: 100ms
